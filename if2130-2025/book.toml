@@ -1,0 +1,6 @@
+[book]
+authors = ["Lock1"]
+language = "id"
+multilingual = false
+src = "src"
+title = "IF2130 Black Book: OS x86 - 2025"
