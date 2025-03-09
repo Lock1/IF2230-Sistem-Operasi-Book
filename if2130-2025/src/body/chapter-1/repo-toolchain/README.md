@@ -2,7 +2,7 @@
 Berikut adalah list host environment yang telah diuji oleh asisten dan penulis
 
 Arsitektur & \\( \mu \\)arch CPU:
-- x64 - AMD Ryzen 4000
+- x86-64 - AMD Ryzen 4000
 - Apple Silicon - M1
 
 Sistem Operasi Host:
@@ -14,7 +14,7 @@ Sistem Operasi Host:
 
 <br/>
 
-Dev environment akan didasarkan pada Linux + x86_64.
+Dev environment akan didasarkan pada Linux + x86-64.
 [Visual Studio Code](https://code.visualstudio.com/) akan digunakan sebagai makeshift IDE untuk build & debugging.
 
 Pengguna Windows dan Apple Silicon dapat mengecek bagian [Appendix: Toolchain](./../../back-matter/appendix/toolchain/wsl.md)
