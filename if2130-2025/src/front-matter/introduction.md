@@ -26,4 +26,4 @@ Jika menemukan issue dengan navigasi hyperlink, ejaan, dan lain-lain, laporkan p
     Brush
 </div>
 
-[^1]: <span style="font-size: 8pt;">Ketika buku ini ditulis, terdapat issue dengan fitur search sehingga hanya dapat digunakan pada bagian [The Osnomicon: x86 - 3rd Edition](../index.md)</span>
+[^1]: Ketika buku ini ditulis, terdapat issue dengan fitur search sehingga hanya dapat digunakan pada bagian [The Osnomicon: x86 - 3rd Edition](../index.md)

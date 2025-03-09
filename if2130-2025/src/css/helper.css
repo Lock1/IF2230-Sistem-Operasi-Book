@@ -8,3 +8,8 @@
     text-align: center;
     font-size: 8pt;
 }
+
+/* Applies to built-in class for footnote text */
+.footnote-definition p {
+    font-size: 8pt;
+}
