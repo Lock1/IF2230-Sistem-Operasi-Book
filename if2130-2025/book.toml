@@ -1,9 +1,9 @@
 [book]
+title = "The Osnomicon: x86 - 3rd Edition"
 authors = ["Lock1"]
 language = "id"
 multilingual = false
 src = "src"
-title = "The Osnomicon: x86 - 3rd Edition"
 
 [output.html]
 default-theme = "ayu"
