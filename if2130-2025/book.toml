@@ -16,3 +16,6 @@ additional-css = ["src/css/helper.css"]
 [output.html.playground]
 editable = true
 line-numbers = true
+
+[output.html.fold]
+enable = true
