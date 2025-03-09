@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="id" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The Osnomicon: x86 - 3rd Edition</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="src/css/helper.css">
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Osnomicon: x86 - 3rd Edition</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Lock1/IF2230-Sistem-Operasi-Book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="the-osnomicon-x86---3rd-edition"><a class="header" href="#the-osnomicon-x86---3rd-edition">The Osnomicon: x86 - 3rd Edition</a></h1>
+<p><em>by 13519214 and Asisten Laboratorium Sistem Paralel dan Terdistribusi</em></p>
+<p>Buku edisi ketiga ini ditulis untuk membantu pengerjaan tugas mata kuliah IF2130 Sistem Operasi 2025 <sup class="footnote-reference"><a href="#1">1</a></sup>.</p>
+<p>Source code buku ini tersedia pada <button onclick="document.getElementById('git-repository-button').click()"><i class="fa fa-github"></i> Github</button>.</p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>IF2230 untuk 2024 dan sebelumnya</p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="preface"><a class="header" href="#preface">Preface</a></h1>
+<p><em>Sistem Operasi, Kernel, Bare Metal, Assembly, Machine Code</em></p>
+<p>Kata-kata diatas terasa seperti <em>forbidden magic word</em> untuk sebagian besar software engineer.
+Banyak mahasiswa yang mengatakan sistem operasi terasa “abstrak” dan takut ketika menghadapi hal-hal yang berhubungan dengan sistem operasi.</p>
+<p>Sistem operasi dianggap sebagai sebuah “black box” yang hanya sebagian kecil orang dapat memahaminya.
+Sama seperti framework dan library, jika fitur X tidak ada atau ada bug aneh dengan fitur Y, <em>dunno why, waktunya buka search engine</em></p>
+<p>Hal ini sangat disayangkan sering terjadi dan adanya teknologi baru seperti LLM semakin memperparah situasi “black box” ini.
+Daripada mencoba memahami permasalahan yang ada dengan membuka source code kernel atau framework yang tersedia open source,
+lempar error stack trace dan berharap alat sulap bernama LLM menyelesaikannya.</p>
+<br/>
+<blockquote>
+<p><em>All non-trivial abstractions, to some degree, are leaky.</em></p>
+</blockquote>
+<p>Abstraksi penting pada software engineering.
+Namun kemampuan dan keberanian untuk membuka black box ketika dibutuhkan juga penting untuk melakukan non-trivial problem solving.
+Issue yang dihadapi pada abstraksi tingkat atas mungkin berasal dari keterbatasan fundamental pada lapisan bawah.</p>
+<p>Open source merupakan privilege unik yang dimiliki software engineer.
+Source code dari sebuah library, framework, kernel sudah tersedia secara terbuka dan hidden in plain sight
+dikarenakan ketakutan membuka dan mempelajari black box.
+Pernahkah terpikirkan kita dapat memodifikasi sebuah library atau melakukan debugging langsung source code dari sebuah library?</p>
+<p><em>Kenapa membatasi diri hanya sebagai pengguna library dan membuat aplikasi web?</em></p>
+<p><em>Kenapa tidak memahami black box dan membuat framework sendiri jika perlu?</em></p>
+<br/>
+<p>Buku ini ditujukan untuk membantu pengerjaan tugas besar mata kuliah Sistem Operasi.
+Tugas besar menugaskan pembaca untuk mengimplementasikan sistem operasi yang diharapkan dapat mendorong keberanian dalam membuka sebuah black box.</p>
+<p>Buku ini ditulis dengan <em>tangan</em> dan diharapkan dapat menyediakan sumber lengkap ala manual untuk pengerjaan tugas.
+Pembaca diharapkan untuk mengerjakan menggunakan alat kuno bernama <em>tangan</em> dan <em>membaca</em> dokumentasi.</p>
+<p>Jika mengalami stuck setelah mencoba sendiri, gunakan medium diskusi yang disediakan asisten seperti layanan asistensi dan sheet QnA.
+Penulis dan asisten laboratorium Sistem Paralel dan Terdistribusi juga dapat dikontak pada <a href="mailto:labsister@std.stei.itb.ac.id">labsister@std.stei.itb.ac.id</a>.</p>
+<p>Setelah membaca dan mengerjakan tugas ini, diharapkan pembaca merasakan pengalaman baru
+dengan membuka dan berkenalan dengan satu black box bernama “Sistem Operasi”—<em>dan bukan LLM yang menjadi semakin pintar</em>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="introduction-3rd-edition"><a class="header" href="#introduction-3rd-edition">Introduction: 3rd Edition</a></h1>
+<p>Buku ini adalah iterasi ke-3 sebagai panduan pengerjaan tugas besar dan eksplorasi secara umum Sistem Operasi.
+Perbedaan utama dari edisi sebelumnya adalah medium penulisan berpindah dari WYSIWYG editor seperti Word &amp; Google Docs ke <a href="https://github.com/rust-lang/mdBook">rustlang/mdBook</a>.</p>
+<p>Sejak awal buku ini ditulis secara non-serial mengikuti nature dari eksplorasi kernel development yang sangat open-ended.
+Diharapkan dengan mengganti medium yang digunakan pada edisi sebelumnya dengan mdBook akan mempermudah pembaca untuk melakukan navigasi.</p>
+<br/>
+<p>Gunakan alat-alat seperti
+<button onclick="document.getElementById('search-toggle').click()"><i class="fa fa-search"></i> Search</button>
+dan
+<button onclick="document.getElementById('sidebar-toggle').click()"><i class="fa fa-bars"></i> Toggle Sidebar</button>
+yang tersedia navbar untuk mempermudah navigasi. Internal hyperlink akan digunakan untuk mereferensi bagian lain dari buku ini yang relevan.
+Bagian belakang buku akan disediakan appendix, glossary, dan referensi tambahan yang dapat membantu pengerjaan.</p>
+<p>Jika menemukan issue dengan navigasi hyperlink, ejaan, dan lain-lain, laporkan permasalahan ke
+<a href="mailto:labsister@std.stei.itb.ac.id">labsister@std.stei.itb.ac.id</a>, <a href="mailto:brshlckd@gmail.com">brshlckd@gmail.com</a>, atau buat
+<button onclick="document.getElementById('git-repository-button').click()"><i class="fa fa-github"></i> GitHub</button> issue pada source repository.</p>
+<div style="text-align: right; font-size: 8pt;">
+    <i>Dedicated to IF2230 & Low-level Programming</i>
+    <br/>
+    <i>Anyway, Good Luck, Have Fun!</i>
+    <br/>
+    Brush
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-1-toolchain-kernel-gdt"><a class="header" href="#chapter-1-toolchain-kernel-gdt">Chapter 1: Toolchain, Kernel, GDT</a></h1>
+<p>Chapter ini akan menyiapkan repository awal yang akan digunakan selama pengerjaan.
+Pada akhir chapter, sistem operasi dengan kernel mini dapat dijalankan menggunakan QEMU dan VSCode.</p>
+<div class="inline-img">
+    <img src="body/chapter-1/./img/ch1-front.png" alt="QEMU - Running Minimal Kernel" width="60%"/>
+    <p>QEMU: Sistem Operasi!</p>
+</div>
+<p>Dimulai dengan menyiapkan <a href="body/chapter-1/./repository.html">1.1. Repository &amp; Toolchain</a> yang digunakan untuk build sistem operasi,
+membuat <a href="body/chapter-1/./kernel.html">1.2 Kernel</a> sistem operasi sederhana,
+dan ditutup dengan pembuatan <a href="body/chapter-1/./gdt.html">1.3. Global Descriptor Table</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="repository--toolchain"><a class="header" href="#repository--toolchain">Repository &amp; Toolchain</a></h1>
+<p>Berikut adalah list host environment yang telah diuji oleh asisten dan penulis</p>
+<p>Arsitektur &amp; \( \mu \)arch CPU:</p>
+<ul>
+<li>x64 - AMD Ryzen 4000</li>
+<li>Apple Silicon - M1</li>
+</ul>
+<p>Sistem Operasi Host:</p>
+<ul>
+<li>Windows 10/11 + WSL Ubuntu 20.04/22.04</li>
+<li>MacOS Ventura 13.2.1</li>
+<li>Native Ubuntu Desktop 20.04</li>
+<li>Native Arch Linux</li>
+<li>Native Fedora 41</li>
+</ul>
+<br/>
+<p>Dev environment akan didasarkan pada Linux + x86_64.
+<a href="https://code.visualstudio.com/">Visual Studio Code</a> akan digunakan sebagai makeshift IDE untuk build &amp; debugging.</p>
+<p>Pengguna Windows dan Apple Silicon dapat mengecek bagian <a href="body/chapter-1/repo-toolchain/./../../back-matter/appendix/toolchain/wsl.html">Appendix: Toolchain</a>
+yang menyediakan toolchain alternatif untuk masing-masing environment.</p>
+<p>Jika mengalami kendala pada bagian setup repository, gunakan sheet QnA dan layanan asistensi.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="kit-repository"><a class="header" href="#kit-repository">Kit Repository</a></h1>
+<!-- TODO: Link Kit Repository -->
+<pre><code class="language-text">kit-repository
+├── .vscode
+│   ├── launch.json
+│   ├── tasks.json
+│   └── settings.json
+├── bin
+│   └── .gitignore
+├── other
+│   └── grub1
+├── src
+│   ├── header
+│   │   ├── kernel-entrypoint.h
+│   │   ├── cpu
+│   │   │   └── gdt.h
+│   │   └── stdlib
+│   │       └── string.h
+│   ├── stdlib
+│   │   └── string.c
+│   └── kernel-entrypoint.s
+├── .gitignore
+├── makefile
+└── README.md
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="kernel"><a class="header" href="#kernel">Kernel</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="global-descriptor-table"><a class="header" href="#global-descriptor-table">Global Descriptor Table</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="appendix"><a class="header" href="#appendix">Appendix</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="windows-wsl"><a class="header" href="#windows-wsl">Windows: WSL</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="macos-apple-silicon"><a class="header" href="#macos-apple-silicon">MacOS: Apple Silicon</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="glossary"><a class="header" href="#glossary">Glossary</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="references"><a class="header" href="#references">References</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+        <script>
+            window.playground_line_numbers = true;
+        </script>
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="ace.js"></script>
+        <script src="editor.js"></script>
+        <script src="mode-rust.js"></script>
+        <script src="theme-dawn.js"></script>
+        <script src="theme-tomorrow_night.js"></script>
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
