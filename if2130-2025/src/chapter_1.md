@@ -1,6 +1,7 @@
-# Chapter 1
+# Chapter 1: Toolchain, Kernel, GDT
 
-Chapter 0 adalah introduction awal ke kernel development. Sebagian besar chapter ini akan dihabiskan untuk setup Repository & Toolchain, membuat Kernel dasar yang dapat dicompile, dan Global Descriptor Table sebagai penutup. 
+Chapter ini ditujukan
+ adalah introduction awal ke kernel development. Sebagian besar chapter ini akan dihabiskan untuk setup Repository & Toolchain, membuat Kernel dasar yang dapat dicompile, dan Global Descriptor Table sebagai penutup. 
 
 Buku ini akan menggunakan Linux dan x64 sebagai dev environment. Panduan telah diuji pada arsitektur x64, Windows 10 & 11 + WSL2 Ubuntu 20.04/22.04, Ubuntu Desktop 20.04 & Arch Linux. 
 

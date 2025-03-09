@@ -1,5 +1,27 @@
 # Introduction: 3rd Edition
 
-Edisi ketiga ditulis menggunakan [rustlang/mdBook](https://github.com/rust-lang/mdBook) dan didesain untuk konsumsi menggunakan web browser. Gunakan alat-alat seperti <button onclick="document.getElementById('search-toggle').click()"><i class="fa fa-search"></i> Search</button> dan <button onclick="document.getElementById('sidebar-toggle').click()"><i class="fa fa-bars"></i> Toggle Sidebar</button> yang tersedia navbar untuk mempermudah navigasi.
+Buku ini adalah iterasi ke-3 sebagai panduan pengerjaan tugas besar dan eksplorasi secara umum Sistem Operasi.
+Perbedaan utama dari edisi sebelumnya adalah medium penulisan berpindah dari WYSIWYG editor seperti Word & Google Docs ke [rustlang/mdBook](https://github.com/rust-lang/mdBook).
 
-Jika menemukan issue dengan navigasi hyperlink, ejaan, dan lain-lain, laporkan permasalahan ke [labsister@std.stei.itb.ac.id](mailto:labsister@std.stei.itb.ac.id) atau buat <button onclick="document.getElementById('git-repository-button').click()"><i class="fa fa-github"></i> GitHub</button> issue pada source repository.
+Sejak awal buku ini ditulis secara non-serial mengikuti nature dari kernel development yang sangat open-ended.
+Diharapkan mdBook yang ditargetkan pada web browser akan lebih mempermudah pembaca untuk melakukan navigasi buku ini.
+
+<br/>
+
+Gunakan alat-alat seperti
+<button onclick="document.getElementById('search-toggle').click()"><i class="fa fa-search"></i> Search</button>
+dan
+<button onclick="document.getElementById('sidebar-toggle').click()"><i class="fa fa-bars"></i> Toggle Sidebar</button>
+yang tersedia navbar untuk mempermudah navigasi.
+
+Jika menemukan issue dengan navigasi hyperlink, ejaan, dan lain-lain, laporkan permasalahan ke
+[labsister@std.stei.itb.ac.id](mailto:labsister@std.stei.itb.ac.id), [brshlckd@gmail.com](mailto:brshlckd@gmail.com), atau buat
+<button onclick="document.getElementById('git-repository-button').click()"><i class="fa fa-github"></i> GitHub</button> issue pada source repository.
+
+<div style="text-align: right; font-size: 8pt;">
+    <i>Dedicated to IF2230 & Low-level Programming</i>
+    <br/>
+    <i>Anyway, Good Luck, Have Fun!</i>
+    <br/>
+    Brush
+</div>
