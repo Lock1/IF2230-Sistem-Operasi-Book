@@ -1,7 +1,7 @@
 # Table of Contents
 
 ## Front matter
-[The Osnomicon: x86 - 3rd Edition](./front-matter/title-page.md)
+[The Osnomicon: x86 - 3rd Edition](./index.md)
 [Preface](./front-matter/preface.md)
 [Introduction: 3rd Edition](./front-matter/introduction.md)
 
