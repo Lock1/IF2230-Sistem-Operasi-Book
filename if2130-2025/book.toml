@@ -4,3 +4,10 @@ language = "id"
 multilingual = false
 src = "src"
 title = "The Osnomicon: x86 - 3rd Edition"
+
+[output.html]
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
+smart-punctuation = true
+mathjax-support = true
+git-repository-url = "https://github.com/Lock1/IF2230-Sistem-Operasi-Book"
