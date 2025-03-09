@@ -1,5 +1,4 @@
 # Introduction: 3rd Edition
-
 Buku ini adalah iterasi ke-3 sebagai panduan pengerjaan tugas besar dan eksplorasi secara umum Sistem Operasi.
 Perbedaan utama dari edisi sebelumnya adalah medium penulisan berpindah dari WYSIWYG editor seperti Word & Google Docs ke [rustlang/mdBook](https://github.com/rust-lang/mdBook).
 
@@ -9,7 +8,7 @@ Diharapkan dengan mengganti medium yang digunakan pada edisi sebelumnya dengan m
 <br/>
 
 Gunakan alat-alat seperti
-<button onclick="document.getElementById('search-toggle').click()"><i class="fa fa-search"></i> Search</button>
+<button onclick="document.getElementById('search-toggle').click()"><i class="fa fa-search"></i> Search</button>[^1]
 dan
 <button onclick="document.getElementById('sidebar-toggle').click()"><i class="fa fa-bars"></i> Toggle Sidebar</button>
 yang tersedia navbar untuk mempermudah navigasi. Internal hyperlink akan digunakan untuk mereferensi bagian lain dari buku ini yang relevan.
@@ -26,3 +25,5 @@ Jika menemukan issue dengan navigasi hyperlink, ejaan, dan lain-lain, laporkan p
     <br/>
     Brush
 </div>
+
+[^1]: <span style="font-size: 8pt;">Ketika buku ini ditulis, terdapat issue dengan fitur search sehingga hanya dapat digunakan pada bagian [The Osnomicon: x86 - 3rd Edition](../index.md)</span>
