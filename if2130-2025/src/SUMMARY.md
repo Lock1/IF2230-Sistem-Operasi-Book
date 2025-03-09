@@ -33,10 +33,10 @@
 
 ## Back Matter
 - [Appendix](./back-matter/appendix/README.md)
-    - [Toolchain: Non-Linux]()
+    - [A - Toolchain: Non-Linux](./back-matter/appendix/toolchain/README.md)
         - [Windows: WSL](./back-matter/appendix/toolchain/wsl.md)
-        - [MacOS: Apple Silicon](./back-matter/appendix/toolchain/apple-silicon.md)
-    - [Programming Language: C]() <!-- Safety, stack & heap -->
+        - [MacOS: x86 & Apple Silicon](./back-matter/appendix/toolchain/macos.md)
+    - [B - Programming Language: C]() <!-- Safety, stack & heap -->
 
 [Glossary](./back-matter/glossary.md)
 [References](./back-matter/references.md)
