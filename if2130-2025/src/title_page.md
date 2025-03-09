@@ -1,0 +1,8 @@
+# The Osnomicon: x86 - 3rd Edition
+
+*by 13519214 and Asisten Laboratorium Sistem Paralel dan Terdistribusi*
+
+Buku edisi ketiga ini ditulis untuk membantu pengerjaan tugas mata kuliah IF2130 Sistem Operasi 2025 [^1]. 
+
+
+[^1]: IF2230 untuk 2024 dan sebelumnya
