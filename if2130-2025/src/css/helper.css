@@ -1,0 +1,10 @@
+.inline-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inline-img p {
+    text-align: center;
+    font-size: 8pt;
+}

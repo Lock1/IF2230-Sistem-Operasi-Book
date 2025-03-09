@@ -1,12 +1,13 @@
 # Chapter 1: Toolchain, Kernel, GDT
 
-Chapter ini akan menyiapkan repository awal
- adalah introduction awal ke kernel development. Sebagian besar chapter ini akan dihabiskan untuk setup Repository & Toolchain, membuat Kernel dasar yang dapat dicompile, dan Global Descriptor Table sebagai penutup. 
+Chapter ini akan menyiapkan repository awal yang akan digunakan selama pengerjaan.
+Pada akhir chapter, sistem operasi dengan kernel mini dapat dijalankan menggunakan QEMU dan VSCode.
 
-Buku ini akan menggunakan Linux dan x64 sebagai dev environment. Panduan telah diuji pada arsitektur x64, Windows 10 & 11 + WSL2 Ubuntu 20.04/22.04, Ubuntu Desktop 20.04 & Arch Linux. 
+<div class="inline-img">
+    <img src="./img/ch1-front.png" alt="QEMU - Running Minimal Kernel" width="60%"/>
+    <p>QEMU: Sistem Operasi!</p>
+</div>
 
-Untuk Apple Silicon, akan disediakan alternate toolchain dan workflow yang dapat digunakan untuk melakukan development pada Apple Silicon. Panduan tersebut diuji pada MacOS Ventura 13.2.1.
-
-Jika mengalami kendala ketika memasang tools, dapat dicoba untuk mencari solusi terlebih dahulu menggunakan search engine dan dapat menggunakan sheet QnA jika masih mengalami kendala.
-
-Expect pada akhir Chapter 0 sistem operasi telah dapat dijalankan menggunakan QEMU. 
+Dimulai dengan menyiapkan [1.1. Repository & Toolchain](./repository.md) yang digunakan untuk build sistem operasi,
+membuat [1.2 Kernel](./kernel.md) sistem operasi sederhana,
+dan ditutup dengan pembuatan [1.3. Global Descriptor Table](./gdt.md).
