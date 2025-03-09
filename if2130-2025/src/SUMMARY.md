@@ -2,7 +2,8 @@
 
 [The Osnomicon: x86 - 3rd Edition](./title_page.md)
 [Preface](./preface.md)
-[Introduction](./introduction.md)
+[Introduction: 3rd Edition](./introduction.md)
+
 - [Chapter 1: Toolchain, Kernel, GDT](./chapter_1.md)
     - [Repository & Toolchain]()
     - [Kernel]()
@@ -23,3 +24,4 @@
 
 - [Appendix]()
     - [Programming Language: C]() <!-- Safety, stack & heap -->
+    - [WSL & Apple Silicon]()
