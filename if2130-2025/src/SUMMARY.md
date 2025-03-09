@@ -1,27 +1,36 @@
-# Summary
+# Table of Contents
 
-[The Osnomicon: x86 - 3rd Edition](./title_page.md)
+## Front matter
+[The Osnomicon: x86 - 3rd Edition](./title-page.md)
 [Preface](./preface.md)
 [Introduction: 3rd Edition](./introduction.md)
 
-- [Chapter 1: Toolchain, Kernel, GDT](./chapter_1.md)
-    - [Repository & Toolchain]()
-    - [Kernel]()
+---
+
+## Body
+1. [Chapter 1: Toolchain, Kernel, GDT](./chapter-1.md)
+    - [Repository & Toolchain](./repository.md)
+    - [Kernel](./kernel.md)
     - [GDT]()
     - [Extras: Computer]()
 
-- [Chapter 2: Interrupt, Driver, File System]()
+2. [Chapter 2: Interrupt, Driver, File System]()
     - [Kernel Development]()
     - [Driver: VGA Text Mode]()
     - [Interrupt]()
     - [Driver: Keyboard]()
     - [File System: ext2 - IF2130 Edition]()
 
-- [Chapter 3: Paging, User Mode, Shell]()
+3. [Chapter 3: Paging, User Mode, Shell]()
     - [Paging]()
     - [User Mode]()
     - [Shell]()
 
+---
+
+## Back Matter
 - [Appendix]()
     - [Programming Language: C]() <!-- Safety, stack & heap -->
     - [WSL & Apple Silicon]()
+- [Glossary]()
+- [References]()

@@ -3,5 +3,7 @@
     "MD013": { "line_length": 150 },
     "MD042": false,
     "MD007": { "indent": 4 },
-    "MD036": false
+    "MD036": false,
+    "MD022": false,
+    "MD032": false
 }

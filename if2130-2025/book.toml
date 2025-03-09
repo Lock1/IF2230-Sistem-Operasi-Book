@@ -11,3 +11,7 @@ preferred-dark-theme = "ayu"
 smart-punctuation = true
 mathjax-support = true
 git-repository-url = "https://github.com/Lock1/IF2230-Sistem-Operasi-Book"
+
+[output.html.playground]
+editable = true
+line-numbers = true
