@@ -11,9 +11,9 @@ Selain itu diharapkan dengan markdown + git, maintainability akan lebih baik.
 
 Gunakan alat-alat seperti
 <button onclick="document.getElementById('search-toggle').click()"><i class="fa fa-search"></i> Search</button>[^1]
-dan
-<button onclick="document.getElementById('sidebar-toggle').click()"><i class="fa fa-bars"></i> Toggle Sidebar</button>
-yang tersedia navbar untuk mempermudah navigasi. Internal hyperlink akan digunakan untuk mereferensi bagian lain dari buku ini yang relevan.
+,
+<button onclick="document.getElementById('sidebar-toggle').click()"><i class="fa fa-bars"></i> Toggle Sidebar</button>,
+atau arrow key pada keyboard untuk mempermudah navigasi. Internal hyperlink akan digunakan untuk mereferensi bagian lain dari buku ini yang relevan.
 Bagian belakang buku akan disediakan appendix, glossary, dan referensi tambahan yang dapat membantu pengerjaan.
 
 Jika menemukan issue dengan navigasi hyperlink, ejaan, dan lain-lain, laporkan permasalahan ke
