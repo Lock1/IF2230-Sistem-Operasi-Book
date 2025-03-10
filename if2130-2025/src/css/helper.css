@@ -9,10 +9,14 @@
     font-size: 8pt;
 }
 
+
+
 /* Applies to built-in class for footnote text */
 .footnote-definition p {
     font-size: 8pt;
 }
+
+
 
 .internal-link, .auto-internal-link a {
     font-size: 10pt;
@@ -31,6 +35,8 @@
     background-color: rgb(33, 33, 33);
     white-space: nowrap;
 }
+
+
 
 .external-link {
     font-size: 10pt;
@@ -54,4 +60,35 @@
 
 .external-link:link, .external-link:visited, .external-link:active {
     color: orange;
+}
+
+
+
+.warning {
+    display: flex;
+    align-items: center;
+    color: peru;
+    font-size: 11pt;
+}
+
+.warning::before {
+    padding-top: 0pt;
+}
+
+
+
+blockquote div.info-title {
+    padding-top: 12pt;
+    display: flex;
+    gap: 5pt;
+    font-size: 10pt;
+    font-weight: 700;
+}
+
+blockquote div.info-title img {
+    width: 2.5%;
+}
+
+blockquote p {
+    font-size: 8pt;
 }
