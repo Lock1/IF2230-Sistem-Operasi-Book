@@ -158,17 +158,93 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="windows-wsl"><a class="header" href="#windows-wsl">Windows: WSL</a></h1>
+                        <h1 id="windows-windows-subsystem-for-linux"><a class="header" href="#windows-windows-subsystem-for-linux">Windows: Windows Subsystem for Linux</a></h1>
+<div class="inline-img">
+    <img src="./img/wsl-ss.png" alt="WSL - Hello World?"/>
+    <p>Fake Linux!</p>
+</div>
+<p><a href="https://learn. microsoft.com/en-us/windows/wsl/about" class="external-link">Windows Subsystem for Linux</a>
+atau WSL memperbolehkan pengguna Windows untuk menggunakan alat-alat umum Linux pada Windows.
+Banyak alat-alat kernel development hanya tersedia pada platform Linux, sehingga WSL akan digunakan sebagai <em>lightweight VM</em> untuk pengerjaan tugas ini.</p>
+<p>Install WSL2 sesuai instruksi yang terdapat pada
+<a href="https://learn.microsoft.com/en-us/windows/wsl/install" class="external-link">https://learn.microsoft.com/en-us/windows/wsl/install</a>.
+Disarankan untuk memasang distro Ubuntu atau Debian.</p>
+<div class="warning">
+    <p>
+        Pastikan untuk menginstall WSL2
+        <span style="font-size:8pt;">(bukan WSL1)</span>
+        dan Windows versi terbaru
+        <span style="font-size:8pt;">(Windows 10 21H2+ atau 11)</span>
+    </p>
+</div>
+<br/>
+<h2 id="wsl-gui-application"><a class="header" href="#wsl-gui-application">WSL: GUI Application</a></h2>
+<p>Boot distro WSL dan pasang <code>xeyes</code> untuk menguji WSL yang diinstall dapat menampilkan GUI</p>
+<pre><code class="language-bash">sudo apt install x11-apps # Debian, Ubuntu
+sudo dnf install xeyes    # Fedora, RHEL
+</code></pre>
+<p>Jalankan command <code>xeyes</code>. Jika WSL berjalan dengan normal akan muncul window baru dengan mata yang mengikuti kursor mouse.</p>
+<div class="inline-img">
+    <img src="./img/wsl-xeyes.png" alt="WSL: Ubuntu 20.04 - xeyes"/>
+    <p>👀 👀 👀</p>
+</div>
+<p>Jika command <code>xeyes</code> berjalan tetapi tidak muncul apapun,
+cek ulang versi Windows atau coba untuk memasang <a href="#fallback-solution-manual-x11-server" class="internal-link">X11 server</a> secara manual.</p>
+<blockquote>
+<div class="info-title">
+  <img src="./img/icons8-info.svg" alt="info-icon"/>
+  <span>WSL 2 & WSLg</span>
+</div>
+<p>Kecuali memiliki alasan tertentu, Microsoft merekomendasikan untuk memasang WSL2.
+Berbeda dengan WSL1, WSL2 dapat menjalankan 32-bit ELF executable dan dengan mudah dapat berinteraksi filesystem milik Windows.</p>
+<p>WSLg merupakan fitur WSL terbaru yang membuat aplikasi didalam WSL dapat menampilkan GUI.
+Aplikasi seperti Firefox, QEMU, xeyes membutuhkan WSLg atau X11 Server untuk dapat menampilkan UI.
+Beruntungnya Windows 10 dan 11 versi terbaru sudah secara default menyediakan WSLg ketika menginstall WSL.</p>
+</blockquote>
+<br/>
+<h2 id="fallback-solution-manual-x11-server"><a class="header" href="#fallback-solution-manual-x11-server">Fallback Solution: Manual X11 Server</a></h2>
+<ol>
+<li>
+<p>Pasang X11 Server seperti <a href="https://sourceforge.net/projects/vcxsrv/" class="external-link">VcXsrv</a></p>
+</li>
+<li>
+<p>Cari shortcut XLaunch yang ada pada start menu, contoh:
+<span style="white-space: nowrap;"><code>C:\ProgramData\Microsoft\Windows\Start Menu\Programs\VcXsrv</code></span></p>
+ <div class="inline-img">
+     <img src="./img/wsl-properties.png" alt="WSL - Properties" style="width: 50%;"/>
+ </div>
+</li>
+<li>
+<p>Klik kanan &amp; buka “Properties”</p>
+</li>
+<li>
+<p>Tambahkan line berikut pada akhir kolom “Target”:
+<span style="white-space: nowrap;"><code>:0 -ac -terminate -lesspointer -multiwindow -clipboard -wgl -dpi auto</code></span></p>
+ <div class="inline-img">
+     <img src="./img/wsl-target.png" alt="WSL - Target" style="width: 50%"/>
+ </div>
+</li>
+<li>
+<p>Buka WSL dan jalankan command berikut:
+<span style="white-space: nowrap;"><code>echo 'export DISPLAY=`grep -oP "(?&lt;=nameserver ).+" /etc/resolv.conf`:0.0'&gt;&gt; ~/.bashrc</code></span></p>
+</li>
+<li>
+<p>Restart WSL (Command line <code>wsl --shutdown</code> dan buka ulang) dan jalankan shortcut VcXsrv yang telah diedit</p>
+</li>
+<li>
+<p>Coba ulang command <code>xeyes</code></p>
+</li>
+</ol>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../back-matter/appendix/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../back-matter/appendix/toolchain/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../../back-matter/appendix/toolchain/apple-silicon.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../back-matter/appendix/toolchain/macos.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -178,11 +254,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../back-matter/appendix/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../back-matter/appendix/toolchain/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../../back-matter/appendix/toolchain/apple-silicon.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../back-matter/appendix/toolchain/macos.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
