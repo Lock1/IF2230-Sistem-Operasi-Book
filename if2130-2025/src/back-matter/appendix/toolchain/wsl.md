@@ -57,4 +57,22 @@ cek ulang versi Windows atau coba untuk memasang <a href="#fallback-solution-man
 <br/>
 
 ## Fallback Solution: Manual X11 Server
-TBA
+1. Pasang X11 Server seperti <a href="https://sourceforge.net/projects/vcxsrv/" class="external-link">VcXsrv</a>
+2. Cari shortcut XLaunch yang ada pada start menu, contoh:
+    <span style="white-space: nowrap;">`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\VcXsrv`</span>
+    <div class="inline-img">
+        <img src="./img/wsl-properties.png" alt="WSL - Properties" style="width: 50%;"/>
+    </div>
+
+3. Klik kanan & buka "Properties"
+4. Tambahkan line berikut pada akhir kolom "Target":
+    <span style="white-space: nowrap;">`:0 -ac -terminate -lesspointer -multiwindow -clipboard -wgl -dpi auto`</span>
+    <div class="inline-img">
+        <img src="./img/wsl-target.png" alt="WSL - Target" style="width: 50%"/>
+    </div>
+
+5. Buka WSL dan jalankan command berikut:
+    <span style="white-space: nowrap;">```echo 'export DISPLAY=`grep -oP "(?<=nameserver ).+" /etc/resolv.conf`:0.0'>> ~/.bashrc```</span>
+
+6. Restart WSL (Command line `wsl --shutdown` dan buka ulang) dan jalankan shortcut VcXsrv yang telah diedit
+7. Coba ulang command `xeyes`
