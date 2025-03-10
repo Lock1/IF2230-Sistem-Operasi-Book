@@ -8,6 +8,9 @@ Pada akhir chapter, sistem operasi dengan kernel mini dapat dijalankan menggunak
     <p>QEMU: Sistem Operasi!</p>
 </div>
 
-Dimulai dengan menyiapkan [1.1. Repository & Toolchain](./repository.md) yang digunakan untuk build sistem operasi,
-membuat [1.2 Kernel](./kernel.md) sistem operasi sederhana,
-dan ditutup dengan pembuatan [1.3. Global Descriptor Table](./gdt.md).
+<div class="auto-internal-link">
+    Dimulai dengan menyiapkan <a href="./repo-toolchain/index.md">1.1. Repository & Toolchain</a>
+    yang digunakan untuk build sistem operasi,
+    membuat <a href="./kernel.md">1.2. Kernel</a> sistem operasi sederhana,
+    dan ditutup dengan pembuatan <a href="./gdt.md">1.3. Global Descriptor Table</a>.
+</div>
