@@ -10,8 +10,8 @@
 ## Body
 1. [Chapter 1: Toolchain, Kernel, GDT](./body/chapter-1/README.md)
     - [Repository & Toolchain](./body/chapter-1/repo-toolchain/README.md)
-        - [Kit Repository](./body/chapter-1/repo-toolchain/1-kit-repository.md)
-        - [Makeshift IDE: Visual Studio Code](./body/chapter-1/repo-toolchain/2-ide-vscode.md)
+        - [Makeshift IDE: Visual Studio Code](./body/chapter-1/repo-toolchain/1-ide-vscode.md)
+        - [Kit Repository](./body/chapter-1/repo-toolchain/2-kit-repository.md)
     - [Kernel](./body/chapter-1/kernel.md)
     - [Global Descriptor Table](./body/chapter-1/gdt.md)
     - [Extras: Computer]()

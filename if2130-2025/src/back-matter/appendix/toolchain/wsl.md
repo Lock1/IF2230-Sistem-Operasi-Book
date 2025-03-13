@@ -42,6 +42,10 @@ Jalankan command `xeyes`. Jika WSL berjalan dengan normal akan muncul window bar
 Jika command `xeyes` berjalan tetapi tidak muncul apapun,
 cek ulang versi Windows atau coba untuk memasang <a href="#fallback-solution-manual-x11-server" class="internal-link">X11 server</a> secara manual.
 
+Lanjutkan pemasangan 
+`code --install-extension ms-vscode-remote.remote-wsl`
+
+
 > <div class="info-title">
 >   <img src="./img/icons8-info.svg" alt="info-icon"/>
 >   <span>WSL 2 & WSLg</span>
@@ -56,7 +60,7 @@ cek ulang versi Windows atau coba untuk memasang <a href="#fallback-solution-man
 
 <br/>
 
-## Fallback Solution: Manual X11 Server
+## Fallback GUI Solution: Manual X11 Server
 1. Pasang X11 Server seperti <a href="https://sourceforge.net/projects/vcxsrv/" class="external-link">VcXsrv</a>
 2. Cari shortcut XLaunch yang ada pada start menu, contoh:
     <span style="white-space: nowrap;">`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\VcXsrv`</span>

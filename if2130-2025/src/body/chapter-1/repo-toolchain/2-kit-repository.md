@@ -1,5 +1,7 @@
 # Kit Repository
+Kerangka dasar pengerjaan akan disediakan pada <a href="" class="external-link">Kit Repository</a> yang tersusun seperti berikut
 <!-- TODO: Link Kit Repository -->
+
 ```text
 kit-repository
 ├── .vscode
@@ -24,3 +26,5 @@ kit-repository
 ├── makefile
 └── README.md
 ```
+
+<!-- TODO: I think flip it with vscode -->
